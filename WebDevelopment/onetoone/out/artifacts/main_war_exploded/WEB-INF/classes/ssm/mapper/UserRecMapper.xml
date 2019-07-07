@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.mapper.UserRecMapper">
+  <resultMap id="BaseResultMap" type="ssm.pojo.UserRec">
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="recItemUser" jdbcType="VARCHAR" property="recitemuser" />
+  </resultMap>
+
+  <select id="selectByUid" parameterType="ssm.pojo.UserRec" resultType="ssm.pojo.UserRec">
+    select * from user_rec where uid = #{uid}
+  </select>
+
+</mapper>

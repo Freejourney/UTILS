@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.mapper.UserFavoritesMapper">
+  <resultMap id="BaseResultMap" type="ssm.pojo.UserFavorites">
+    <id column="uid" jdbcType="VARCHAR" property="uid" />
+    <id column="trackid" jdbcType="VARCHAR" property="trackid" />
+    <result column="favo_date" jdbcType="TIMESTAMP" property="favoDate" />
+  </resultMap>
+  <select id="selectByUidDate" parameterType="ssm.pojo.UserFavorites" resultType="ssm.pojo.UserFavorites">
+    select * from user_favorites where uid = #{uid} order by favo_date
+  </select>
+
+  <insert id="insert" parameterType="ssm.pojo.UserFavorites">
+    insert into user_favorites (uid, trackid, favo_date)
+    values (#{uid,jdbcType=VARCHAR}, #{trackid,jdbcType=VARCHAR}, #{favoDate,jdbcType=TIMESTAMP})
+  </insert>
+
+  <delete id="deleteByUTid" parameterType="ssm.pojo.UserFavorites">
+    delete from user_favorites where uid = #{uid} and trackid = #{trackid}
+  </delete>
+</mapper>

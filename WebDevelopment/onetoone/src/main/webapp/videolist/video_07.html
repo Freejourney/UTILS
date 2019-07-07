@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MV页面</title>
+    <link rel="icon" href="../favicons/1.png">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="../css/video-js.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="header-top">
+            <a href="#" class="logo"></a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#" class="header-nav__cur">音乐馆</a></li>
+                    <li><a href="#">我的音乐</a></li>
+                    <li><a href="#">下载客户端</a></li>
+                    <li><a href="#">VIP</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" class="text" placeholder="here...">
+
+                <div class="btn"><i class="icon-sprite"></i></div>
+                <div class="result">
+                    <a href="#" class="result-item">
+                        <span class="rank">1</span>
+                        <span class="title">默</span>
+                        <span class="num">3.4万</span>
+                    </a>
+                    <a href="#" class="result-item">
+                        <span class="rank">2</span>
+                        <span class="title">侧田</span>
+                        <span class="num">3.4万</span>
+                    </a>
+                    <a href="#" class="result-item">
+                        <span class="rank">3</span>
+                        <span class="title">让我留在你身边</span>
+                        <span class="num">3.4万</span>
+                    </a>
+                    <a href="#" class="result-item">
+                        <span class="rank">4</span>
+                        <span class="title">皮皮虾我们走</span>
+                        <span class="num">3.4万</span>
+                    </a>
+                    <a href="#" class="result-item">
+                        <span class="rank">5</span>
+                        <span class="title">欢乐好声音</span>
+                        <span class="num">3.4万</span>
+                    </a>
+
+                    <div class="history">
+                        <span>搜索历史</span>
+                        <i class="icon-sprite"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="header-login">
+                <a href="../login.html" class="login">Login</a>
+                <a href="#" class="open-green">开通绿钻豪华版</a>
+                <a href="#" class="open-vip">开通付费包</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="main">
+    <div class="main-inner">
+        <div style="margin-left: 250px">
+            <video id="my-video" class="video-js" controls preload="auto" width="600" height="400"
+                   poster="m.jpg" data-setup="{}">
+                <source src="http://vodkgeyttp8.vod.126.net/cloudmusic/ODEyNDk0NTA=/ce2c90fa77c0ba5897629985bd3fdc08/4295a68e559d042bead9f20f3cf19fb9.mp4?wsSecret=89a5cb31149258c7fbdd3573a46be2a9&wsTime=1562400789" type="video/mp4">
+                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                <p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/videolist.html"
+                                                                                                                                   target="_blank">supports HTML5 video</a> </p>
+            </video>
+        </div>
+    </div>
+</div>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/video.min.js"></script>
+</body>
+</html>
